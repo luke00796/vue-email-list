@@ -11,9 +11,12 @@
 <body>
     
     <div id="app">
-        <ol>
-            <li>{{email}}</li>
+        <ol v-if="emails.length === 10">
+            <li v-for="email in emails">{{email}}</li>
         </ol>
+        <div v-else>
+            Non sono ancora state generate
+        </div>
     </div>
 
 
